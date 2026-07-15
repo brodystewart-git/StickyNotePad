@@ -1,0 +1,119 @@
+/*
+    Skin Name: Default Paper
+    Created by: Brody Stewart
+    Description: paper-based skin
+    The .skin-config section is for changing the colors, simply paste in the hex codes/rgba and update the description above.
+ */
+.skin-config {
+    -fx-note-title-text: #000000;           /* Title text color */
+    -fx-note-title-prompt-text: #000000;    /* Title empty prompt color */
+    -fx-note-content-text: #000000;         /* Note content text color */
+    -fx-drag-bar-color: #97876d;            /* Drag bar color */
+    -fx-drag-bar-border: #555555;           /* Drag bar border color */
+    -fx-tray-color: transparent;    /* Background Tray Color */
+    -fx-tray-button: #ebd8c2;               /* Tray button colors */
+    -fx-tray-button-hover: #6c6255;         /* Tray button hover effect color */
+}
+
+
+
+/* Please don't mess with anything beyond this point unless you know what you're doing (cus I sure don't) */
+
+.tray-root {
+    -fx-background-color: -fx-tray-color;
+}
+
+.tray-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: -fx-tray-button;
+    -fx-cursor: hand;
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+}
+.tray-button:hover {
+    -fx-text-fill: -fx-tray-button-hover; /* Adds a nice hover effect! */
+}
+
+.note-pin {
+    -fx-text-fill: #CC3333;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+    -fx-font-size: 20;
+    -fx-background-color: transparent;
+    -fx-padding: 2px 0px 0px 4px;
+}
+
+.note-close {
+    -fx-text-fill: #CC3333;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+    -fx-font-size: 20;
+    -fx-background-color: transparent;
+    -fx-padding: 2px 4px 0px 0px;
+}
+
+.note-title {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-alignment: center;
+    -fx-text-fill: -fx-note-title-text;
+    -fx-prompt-text-fill: -fx-note-title-prompt-text;
+    -fx-font-size: 22;
+    -fx-font-weight: bold;
+}
+
+.text-area,
+.text-area .viewport,
+.text-area .content {
+    -fx-background-color: transparent !important;
+}
+
+.note-content {
+    -fx-text-fill: -fx-note-content-text;
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+}
+
+.char-count {
+    -fx-font-size: 11px;
+    -fx-text-fill: #777777;
+}
+
+.note-drag-bar {
+    -fx-background-color: -fx-drag-bar-color; /* Dark gray for the bar itself */
+    -fx-background-radius: 5px 5px 0px 0px; /* Rounded top corners, flat bottom */
+    -fx-border-color: -fx-drag-bar-border; /* Subtle border */
+    -fx-border-radius: 5px 5px 0px 0px;
+    -fx-cursor: move; /* Move cursor when hovered */
+}
+
+.note-pin, .note-close {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-padding: 0;
+}
+
+.note-pin:hover, .note-close:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.4), 3, 0.0, 0, 1);
+    -fx-opacity: 0.85;
+}
+
+.text-area .scroll-bar:vertical,
+.text-area .scroll-bar:horizontal {
+    -fx-opacity: 0;
+    -fx-padding: 0;
+    -fx-max-width: 0;
+    -fx-max-height: 0;
+}
+
+.text-area .scroll-bar:vertical .increment-button,
+.text-area .scroll-bar:vertical .decrement-button,
+.text-area .scroll-bar:horizontal .increment-button,
+.text-area .scroll-bar:horizontal .decrement-button {
+    -fx-padding: 0;
+}
+
+.text-area .corner {
+    -fx-background-color: transparent;
+}

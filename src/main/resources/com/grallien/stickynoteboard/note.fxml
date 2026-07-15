@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<?import javafx.geometry.Insets?>
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.grallien.stickynoteboard.NoteController"
+           fx:id="rootPane"
+           prefWidth="200.0" prefHeight="300.0">
+
+    <HBox fx:id="dragHandle"
+          StackPane.alignment="TOP_CENTER"
+          prefWidth="140.0" prefHeight="20.0"
+          maxWidth="140.0" maxHeight="20.0"
+          styleClass="note-drag-bar">
+    </HBox>
+
+    <ImageView fx:id="skinImageView" fitWidth="200.0" fitHeight="300.0">
+        <StackPane.margin>
+            <Insets top="10.0" right="0" bottom="0" left="0"/>
+        </StackPane.margin>
+    </ImageView>
+
+    <!-- Top Portion -->
+    <VBox spacing="5.0" style="-fx-padding: 0px 12px 8px 12px;">
+        <StackPane.margin>
+            <Insets top="10.0" right="0" bottom="0" left="0"/>
+        </StackPane.margin>
+
+        <!-- Title Area -->
+        <HBox alignment="TOP_LEFT" prefHeight="30.0" style="-fx-padding: 5px 5px 0px 5px;">
+            <Region HBox.hgrow="ALWAYS" />
+            <TextField fx:id="titleField"
+                       prefWidth="240.0"
+                       promptText="Title"
+                       styleClass="note-title">
+            </TextField>
+            <Region HBox.hgrow="ALWAYS" />
+        </HBox>
+
+        <!-- Content Area -->
+        <TextArea fx:id="contentArea"
+                  VBox.vgrow="ALWAYS"
+                  wrapText="true"
+                  styleClass="note-content"
+                  style="-fx-padding: 15px 0px 0px 0px;">
+        </TextArea>
+        <HBox alignment="CENTER_RIGHT">
+            <Label fx:id="charCountLabel" text="0 / 250" style="-fx-font-size: 11px; -fx-text-fill: #777777;"> </Label>
+        </HBox>
+    </VBox>
+
+    <!-- Pin Button -->
+    <Button onAction="#handlePin"
+            StackPane.alignment="TOP_LEFT"
+            styleClass="note-pin">
+        <graphic>
+            <ImageView fx:id="pinIcon" fitWidth="40.0" fitHeight="40.0" pickOnBounds="true" preserveRatio="true"/>
+        </graphic>
+        <StackPane.margin>
+            <Insets top="12.0" right="0" bottom="0" left="6.0"/>
+        </StackPane.margin>
+    </Button>
+
+    <!-- Delete Button -->
+    <Button onAction="#handleDelete"
+            StackPane.alignment="TOP_RIGHT"
+            styleClass="note-close">
+        <graphic>
+            <ImageView fx:id="closeIcon" fitWidth="30.0" fitHeight="30.0" pickOnBounds="true" preserveRatio="true"/>
+        </graphic>
+        <StackPane.margin>
+            <Insets top="12.0" right="6.0" bottom="0" left="0.0"/>
+        </StackPane.margin>
+    </Button>
+
+</StackPane>
