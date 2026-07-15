@@ -4,22 +4,22 @@ A lightweight sticky note application. Built with JavaFX, StickyNotePad features
 
 ---
 
-### 📥 Download
+### Download
 
 **[Download StickyNoteBoard (Latest Version)](https://github.com/brodystewart-git/StickyNotePad/releases/latest/download/StickyNoteBoard.zip)**
 
 ---
 
-### 🚀 Features
+### Features
 
 *   **Persistent Storage**: Keeps your notes safe using a local database backend.
 *   **Global Hotkeys**: Uses native input hooks (`JNativeHook`) to respond to keyboard events even when the application is minimized.
-*   **Customizable UI**: Fully themeable using CSS skinning support.
+*   **Customizable UI**: Fully customizable using CSS skinning support.
 *   **Portable**: No installation required; simply extract and run.
 
 ---
 
-### 🛠 Tech Stack
+### Tech Stack
 
 *   **Language**: Java
 *   **GUI Framework**: JavaFX
@@ -29,7 +29,7 @@ A lightweight sticky note application. Built with JavaFX, StickyNotePad features
 
 ---
 
-### 💻 Getting Started
+### Getting Started
 
 1. **Download**: Grab the latest `.zip` file from the [Releases page](https://github.com/brodystewart-git/StickyNotePad/releases).
 2. **Extract**: Unzip the folder to your preferred location (e.g., Documents or Desktop).
@@ -39,7 +39,7 @@ A lightweight sticky note application. Built with JavaFX, StickyNotePad features
 
 ---
 
-### 📂 Project Structure
+### Project Structure
 
 *   `/app`: Contains the main application JAR and native DLL dependencies.
 *   `/runtime`: Bundled Java runtime environment for portable execution.
